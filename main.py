@@ -41,17 +41,7 @@ def wiki(message):
         bot.register_next_step_handler(message, wiki)
 
 
-def tran(message):
-    user_id = message.from_user.id
 
-    if message.text.lower() == 'hello':
-        bot.send_message(user_id,
-                         'Привет')
-        bot.send_message(user_id, 'Готово, что еще?', reply_markup=kb)
-        bot.register_next_step_handler(message, text_message)
-    else:
-        bot.send_message(user_id, 'Неизвестная операция')
-        bot.register_next_step_handler(message, tran)
 
         
 # Запуск бота
